@@ -17,4 +17,20 @@ class EstudianteSpec extends Specification {
 
     void "test something"() {
     }
+
+    def "crear estudiante semestre valido"(){
+        when: 'creacion estudiante semestre correcto'
+        def u = new Usuario()
+        then:
+        u.validate(['semestre'])
+    }
+
+    def "crear estudiante codigo valido"(){
+        when: 'creacion estudiante codigo correcto'
+        def u = new Usuario()
+        then:
+        u.validate(['codigoInst'])
+    }
+
+    //Falta una prueba
 }

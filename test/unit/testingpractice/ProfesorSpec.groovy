@@ -17,4 +17,13 @@ class ProfesorSpec extends Specification {
 
     void "test something"() {
     }
+
+    def "crear profesor oficina valida"(){
+        when: 'creacion profesor oficina correcta'
+        def u = new Usuario()
+        then:
+        u.validate(['oficina'])
+    }
+
+    //Falta una prueba
 }
